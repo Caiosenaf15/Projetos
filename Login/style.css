@@ -1,0 +1,71 @@
+@charset 'UTF-8';
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: linear-gradient(to bottom, #5a5af3, #ff79e4);
+    width: 100vw;
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 500px;
+    height: 500px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.384);
+    text-align: center;
+}
+
+.cima {
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+.formulario {
+    padding: 10px;
+}
+
+.formulario > form > input {
+    width: 80%;
+    height: 30px;
+    font-size: 1.2em;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+form > span {
+    width: fit-content;
+    height: fit-content;
+}
+
+input#lembrarSenha {
+   height: auto;
+   padding: 0px;
+   width: auto;
+}
+
+label {
+    margin-right: 20px;
+}
+
+#botao {
+    margin-top: 10px;
+}
+
+.baixo {
+    padding: 10px;
+}
+
+#face {
+    margin-right: 5px;
+}
