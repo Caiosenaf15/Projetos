@@ -8,31 +8,47 @@
     <title>Login</title>
 </head>
 <body>
-    <div class="logo"></div>
     <div class="container">
-        <div class="cima">
-            <h1>Login</h1>
-            <p>Entre para usar a plataforma</p>
-        </div>
-        <div class="formulario">
-            <form action="">
-                <span class="material-symbols-outlined">Mail</span><input type="email" name="email" id="email"> <br>
-                <span class="material-symbols-outlined">Password</span> <input type="password" name="senha" id="senha"> <br>
-                <input type="checkbox" name="lembrar" id="lembrarSenha"> <label for="lembrarSenha">Lembrar senha</label>
-                <a href="#">Esqueci a senha</a> <br>
-                <input type="button" value="Logar" id="botao">
-            </form>
-        </div>
-        <div class="baixo">
-            <div class="redesSociais">
-                <p>Não tem uma conta? <a href="#">Crie uma conta grátis!</a></p> <br>
-                <p>Outras formas de logar</p>
-                <a href="#" id="face">Facebook</a>
-                <a href="#">Google</a>
+        <div class="quadro">
+            <div class="logo">
+                <img src="rose_4041004.png" alt="">
             </div>
-            
-        </div>
-        
+            <div class="cima">
+                <h1>Login</h1>
+                <p>Entre para usar a plataforma</p>
+            </div>
+                <form class="formulario">
+                    <div class="itemForm">
+                        <span class="icon material-symbols-outlined">Mail</span><input type="email" name="email" id="email" required autofocus placeholder="Email">
+                    </div>
+                    <div class="itemForm">
+                        <span class="icon material-symbols-outlined">Password</span><input type="password" name="senha" id="senha" required placeholder="Senha">
+                    </div>
+                    <div class="outroForm">
+                        <div class="checkbox">
+                            <input type="checkbox" name="lembrar" id="lembrarSenha"> <label for="lembrarSenha">Lembrar senha</label>
+                        </div>
+                        <a href="#">Esqueci a senha</a>
+                    </div>
+                    <input type="button" value="Logar" id="botao">
+                </form>
+                <div class="rodape">
+                    Não tem uma conta? <a href="#">Crie uma conta grátis!</a>
+                </div>
+            </div>
+            <div class="redesSociais">
+                Outras formas de logar
+                <div class="redesSociaisBotoes">
+                    <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20.945 11a9 9 0 1 1 -3.284 -5.997l-2.655 2.392a5.5 5.5 0 1 0 2.119 6.605h-4.125v-3h7.945z" /></svg>
+                </a>
+                </div>
+                
+            </div>
+     
     </div>
 </body>
 </html>
