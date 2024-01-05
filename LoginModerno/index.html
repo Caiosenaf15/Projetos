@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="signIn">
+        <div class="signIn" >
             <div class="texto">
                 Sign In
             </div>
@@ -42,7 +42,7 @@
                 </div>
             </form>    
         </div>
-        <div class="registro">
+        <div class="registro" onmouseenter="entrou()" onmouseleave="saiu()">
             <div class="textoReg">
                 <h1>Hello, Friend!</h1>
                 <h2>Register with your personal details to use all of site features</h2>
@@ -53,5 +53,22 @@
             </div>
         </div>
     </div>
+    <script>
+        
+        function entrou() {
+            var sign = document.querySelector('div.signIn')
+            sign.style.background = "blueviolet";
+            sign.style.borderRadius = "20px 100px 100px 20px";
+            sign.style.transition = "0.5s"
+            sign.style.transitionDelay = ".1s"
+        }
+
+        function saiu() {
+            var sign = document.querySelector('div.signIn')
+            sign.style.background = "white";
+            sign.style.borderRadius = "20px 0px 0px 20px";
+            sign.style.transitionDelay = "0s"
+        }
+    </script>
 </body>
 </html>

@@ -26,9 +26,11 @@ body {
 }
 
 .signIn {
+    border-radius: 20px 0px 0px 20px;
     width: 50%;
     padding: 10px;
 }
+
 
 .signIn .texto {
     position: absolute;
@@ -50,7 +52,7 @@ body {
 
 .icon {
     margin: 5px;
-    background-color: aqua;
+    background-color: rgb(240, 240, 240);
     border-radius: 10px;
 }
 
@@ -117,7 +119,7 @@ body {
 }
 
 .botao > input:hover {
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
@@ -127,4 +129,54 @@ body {
     background-color: blueviolet;
     color: white;
     border-radius: 100px 20px 20px 100px;
+}
+
+.registro .textoReg {
+    position: absolute;
+    top: 80px;
+    margin: 10px;
+}
+
+.textoReg h1 {
+    position: absolute;
+    width: 350px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.textoReg h2 {
+    position: absolute;
+    width: 300px;
+    font-size: 1rem;
+    top: 70px;
+    left: 30px;
+    text-align: center;
+}
+
+.botaoReg {
+    position: absolute;
+    width: auto;
+    top: 250px;
+    left: 75%;
+    transform: translateX(-50%);
+}
+
+.botaoReg button {
+    background-color: rgb(182, 122, 238);
+    width: 200px;
+    height: 40px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.205);
+    border-radius: 20px;
+    border: 0px;
+}
+
+.botaoReg button:hover {
+    background-color: rgb(209, 165, 250);
+    cursor: pointer;
+}
+
+.registro:hover {
+    background-color: white;
+    border-radius: 0px 20px 20px 0px;
+    transition: .5s;
 }
