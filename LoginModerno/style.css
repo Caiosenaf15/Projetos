@@ -119,7 +119,7 @@ body {
 }
 
 .botao > input:hover {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(224, 223, 223);
     cursor: pointer;
 }
 
@@ -146,10 +146,11 @@ body {
 
 .textoReg h2 {
     position: absolute;
-    width: 300px;
+    width: 350px;
     font-size: 1rem;
     top: 70px;
-    left: 30px;
+    left: 5px;
+    margin: auto;
     text-align: center;
 }
 
@@ -175,8 +176,109 @@ body {
     cursor: pointer;
 }
 
-.registro:hover {
-    background-color: white;
-    border-radius: 0px 20px 20px 0px;
-    transition: .5s;
+@media screen and (max-width: 780px) {
+    .container {
+        width: 600px;
+    }
+
+    .textoReg h1 {
+        left: -40px;
+    }
+
+    .textoReg h2 {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 605px) {
+    .container {
+        width: 500px;
+    }
+
+    .textoReg h1 {
+        font-size: 2rem;
+        left: -65px;
+    }
+
+    .textoReg h2 {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 505px) {
+    body {
+        height: 100vh;
+    }
+    
+    .container {
+        width: 250px;
+    }
+
+    .signIn {
+        width: 250px;
+        height: 250px;
+    }
+    .signIn .texto{
+        top: 10px;
+        left: 50%;
+    }
+
+    .signIn .social {
+        top: 65px;
+        left: 50%;
+    }
+
+    .container .formulario {
+        top: 125px;
+        left: 50%;
+        width: 250px;
+    }
+
+    .textoEmailPassword {
+        display: none;
+    }
+
+    .formulario input[type='password'], input[type='email'] {
+        height: 35px;
+        width: 85%;
+    }
+
+    .textoForm {
+        font-size: .7rem;
+        top: 95px;
+        transform: translateX(4%);
+        width: 220px;
+    }
+
+    .botao {
+        top: 120px;
+        left: 50%;
+    }
+
+    .botao input{
+        height: 40px;
+    }
+
+    .registro {
+        position: absolute;
+        top: 300px;
+        height: 200px;
+        width: 230px;
+        border-radius: 30px 30px 30px 30px;
+    }
+
+    .textoReg h1 {
+        top: -80px;
+        font-size: 1.5rem;
+        left: -70px;
+    }
+
+    .textoReg h2 {
+        top: -30px;
+    }
+
+    .botaoReg {
+        top: 150px;
+        left: 50%;
+    }
 }
