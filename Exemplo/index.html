@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exemplo</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href=""><img src="adobe-indesign.png" alt=""></a>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="actived js-link">Home</a></li>
+                    <li><a href="#sobre" class="js-link">Sobre</a></li>
+                    <li><a href="#trabalhos" class="js-link">Trabalhos</a></li>
+                    <li><a href="#contato" class="js-link">Contato</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <section id="home" class="section">Home</section>
+
+    <section id="sobre" class="section">Sobre</section>
+
+    <section id="trabalhos" class="section">Trabalhos</section>
+
+    <section id="contato" class="section">Contato</section>
+
+    <script>
+        	let links = document.querySelectorAll('.js-link');
+            let sections = document.querySelectorAll('.section');
+
+            window.addEventListener('scroll', () => {
+                sections.forEach(section => {
+                    let top = window.scrollY;
+                    let offset = section.offsetTop - 112;
+                    let heightSection = section.offsetHeight;
+                    let idSection = section.getAttribute('id');
+
+                    if(top >= offset && top < offset + heightSection) {
+                        links.forEach(link  => {
+                            link.classList.remove('actived');
+
+                            document.querySelector(`header nav a[href*='${idSection}']`).classList.add('actived')
+                        })
+                    }
+                })
+            })
+
+            function scrollSection(event) {
+                event.preventDefault();
+
+                const href = event.currentTarget.getAttribute('href');
+
+                const section = document.querySelector(href);
+
+                let topSection = section.offsetTop - 112;
+
+                window.scrollTo({
+                    top: topSection,
+                    behavior: 'smooth'
+                })
+            }
+
+            links.forEach(link => {
+                link.addEventListener('click', scrollSection)
+            })
+    </script>
+</body>
+</html>
