@@ -11,23 +11,30 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
     position: relative;
     min-width: 100vw;
-    height: 100vh;
+    height: 200vh;
     background: linear-gradient(to right, #f7ceee, #b4e3f8);
     display: flex;
 }
 
 .cabecalho {
-    position: absolute;
-    width: 100vw;
-    top: 10px;
+    width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
     align-items: center;
     justify-content: center;
     text-align: center;
+    z-index: 1;
+}
+
+.cabecalho::-webkit-scrollbar-track {
+    background-color: aqua;
 }
 
 .cabecalho button {
@@ -45,7 +52,6 @@ body {
 
 .cabecalho button:hover {
     cursor: pointer;
-    width: 100px;
     background-color: rgba(255, 255, 255, 0.5);
 }
 
