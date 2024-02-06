@@ -4,11 +4,16 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    color: white;
 }
 
 a {
     text-decoration: none;
     display: block;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 ul {
@@ -17,6 +22,7 @@ ul {
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #171D26;
 }
 
 .container {
@@ -25,11 +31,90 @@ body {
     margin: 0 auto;
 }
 
-.menu {
+header {
     position: sticky;
     top: 0;
     width: 100%;
     padding: 3rem 0;
-    background-color: antiquewhite;
+    background-color: #171D26;
     z-index: 2023;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .container a img {
+    width: 40px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 2.4rem;
+
+}
+
+header nav ul li a {
+    font-size: 1.8rem;
+    padding: 15px 32px;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+
+header nav ul li a.actived {
+    background-color: white;
+    color: #653DF5;
+}
+
+.section {
+    width: 100%;
+    height: calc(150vh - 112px);
+    display: flex;
+    font-size: 3.2rem;
+}
+
+#bio {
+    padding: 0px 50px;
+}
+#foto_perfil {
+    display: flex;
+    width: 300px;
+    border-radius: 100%;
+    padding: 40px 40px;
+}
+
+
+#home {
+    background-color: #653DF5;
+}
+
+#sobre {
+    background-color: #8161F4;
+}
+
+#trabalhos {
+    background-color: #9D85F3;
+}
+
+.janelas {
+    display: block;
+    height: 150vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projeto {
+    display: inline-flex;
+    margin: 20px 15px;
+    width: 300px;
+    height: 300px;
+    background-color: aliceblue;
+}
+
+#contato {
+    background-color: #2E3B4D;
+    height: calc(100vh - 112px);
 }

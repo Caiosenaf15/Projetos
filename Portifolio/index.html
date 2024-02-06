@@ -4,26 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Portifólio</title>
+    <title>Exemplo</title>
 </head>
 <body>
-    <div class="container">
-        <div class="menu">
+    <header>
+        <div class="container">
+            <a href=""><img src="" alt=""></a>
             <nav>
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">SOBRE</a></li>
-                    <li><a href="">PROJETOS</a></li>
-                    <li><a href="">CONTATO</a></li>
+                    <li><a href="#home" class="actived js-link">Home</a></li>
+                    <li><a href="#sobre" class="js-link">Sobre</a></li>
+                    <li><a href="#trabalhos" class="js-link">Trabalhos</a></li>
+                    <li><a href="#contato" class="js-link">Contato</a></li>
                 </ul>
             </nav>
+            
         </div>
-    </div>
+    </header>
 
+    <section id="home" class="section">
+        
+    </section>
 
-    <section>HOME</section>
-    <section>SOBRE</section>
-    <section>PROJETOS</section>
-    <section>CONTATO</section>
+    <section id="sobre" class="section">
+        <div id="minhas_informacoes">
+        <img id="foto_perfil" src="../Portifolio/imagens/_983f4c23-c516-439e-aedf-c9997d6d22f2.jpg" alt="">
+        <div id="bio"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse facilis sit a commodi accusantium, deserunt ut veniam est libero culpa quas exercitationem perferendis quis magnam rem consequuntur vel eligendi voluptatem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea consectetur dolores mollitia aut fugiat numquam nemo porro ullam molestiae. Ipsum odio in expedita voluptate. Omnis nihil optio aperiam sit illo?Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores incidunt, saepe deleniti obcaecati eaque cupiditate, tempore necessitatibus illum odit a doloribus perferendis reiciendis veritatis, quae accusantium quam alias velit ullam.</div>
+        </div>
+    </section>
+
+    <section id="trabalhos" class="section">
+        <div class="janelas">
+            <div class="projeto"></div>
+            <div class="projeto"></div>
+            <div class="projeto"></div>
+            <div class="projeto"></div>
+            <div class="projeto"></div>
+            <div class="projeto"></div>
+            <div class="projeto"></div>
+        </div>
+            
+    </section>
+
+    <section id="contato" class="section">Contato</section>
+
+    <script>
+        	let links = document.querySelectorAll('.js-link');
+            let sections = document.querySelectorAll('.section');
+
+            window.addEventListener('scroll', () => {
+                sections.forEach(section => {
+                    let top = window.scrollY;
+                    let offset = section.offsetTop - 112;
+                    let heightSection = section.offsetHeight;
+                    let idSection = section.getAttribute('id');
+
+                    if(top >= offset && top < offset + heightSection) {
+                        links.forEach(link  => {
+                            link.classList.remove('actived');
+
+                            document.querySelector(`header nav a[href*='${idSection}']`).classList.add('actived')
+                        })
+                    }
+                })
+            })
+
+            function scrollSection(event) {
+                event.preventDefault();
+
+                const href = event.currentTarget.getAttribute('href');
+
+                const section = document.querySelector(href);
+
+                let topSection = section.offsetTop - 112;
+
+                window.scrollTo({
+                    top: topSection,
+                    behavior: 'smooth'
+                })
+            }
+
+            links.forEach(link => {
+                link.addEventListener('click', scrollSection)
+            })
+    </script>
 </body>
 </html>
